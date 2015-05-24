@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SourceAnalyzer Name="SOEP Custom Rules">
+  <Description>
+    Rules which provide for SOEP team.
+  </Description>
+  <Properties>
+    <IntegerProperty Name="MaximumNestedBlockDepth" DefaultValue="4" FriendlyName="Maximum Nested Block Depth"
+                           Description="Maximum depth blocks can be nested in a function."/>
+  </Properties>
+  <Rules>
+    <RuleGroup Name="Method">
+      <Rule Name="NestedBlockDepth" CheckId="SO1002">
+        <Context>Refactor this method to not depth more than {0} nested block. Current depth is {1}.</Context>
+        <Description>
+          Too many nested blocks make your code ugly and it also tends to violate single responsibility principle.
+          It is a good practice to introduce a new function tather than to use more nedsted blocks.
+        </Description>
+      </Rule>
+    </RuleGroup>
+  </Rules>
+</SourceAnalyzer>

@@ -12,11 +12,11 @@ using StyleCop;
 namespace SOEP.StyleCopRules
 {
 
-    public partial class MethodShouldNotHaveTooManyLinesSettingsPage : UserControl, IPropertyControlPage
+    public partial class NestedBlockDepthSettingsPageSettingsPage : UserControl, IPropertyControlPage
     {
         private bool dirty;
 
-        private MethodShouldNotHaveTooManyLines Analyzer { get; set; }
+        private NestedBlockDepth Analyzer { get; set; }
         public PropertyControl StyleCopTabControl { get; set; }
         public bool Dirty
         {
@@ -35,10 +35,10 @@ namespace SOEP.StyleCopRules
         }
         public string TabName
         {
-            get { return "MethodShouldNotHaveTooManyLines Rule"; }
+            get { return "NestedBlockDepth Rule"; }
         }
 
-        public MethodShouldNotHaveTooManyLinesSettingsPage(MethodShouldNotHaveTooManyLines Analyzer)
+        public NestedBlockDepthSettingsPageSettingsPage(NestedBlockDepth Analyzer)
         {
             this.Analyzer = Analyzer;
 
@@ -66,8 +66,8 @@ namespace SOEP.StyleCopRules
                     this.StyleCopTabControl.LocalSettings,
                     new IntProperty(
                         this.Analyzer,
-                        MethodShouldNotHaveTooManyLines.MaximumMethodLineCountSettingName,
-                        (int)this.nudMaxMethodLineCount.Value));
+                        NestedBlockDepth.MaximumNestedBlockDepthSettingName,
+                        (int)this.nudMaximumNestedBlockDepth.Value));
             }
 
             this.dirty = false;
@@ -79,18 +79,18 @@ namespace SOEP.StyleCopRules
         private void InitializeSettings()
         {
             // Load the current setting
-            IntProperty maximumMethodLineCountSettingProperty = this.Analyzer.GetSetting(
+            IntProperty maximumNestedBlockDepthSettingProperty = this.Analyzer.GetSetting(
                 this.StyleCopTabControl.MergedSettings,
-                MethodShouldNotHaveTooManyLines.MaximumMethodLineCountSettingName) as IntProperty;
+                NestedBlockDepth.MaximumNestedBlockDepthSettingName) as IntProperty;
 
-            if (maximumMethodLineCountSettingProperty != null)
+            if (maximumNestedBlockDepthSettingProperty != null)
             {
                 // Set the value of the property into an edit box on the page.
-                this.nudMaxMethodLineCount.Value = maximumMethodLineCountSettingProperty.Value;
+                this.nudMaximumNestedBlockDepth.Value = maximumNestedBlockDepthSettingProperty.Value;
             }
         }
 
-        private void nudMaxMethodLineCount_ValueChanged(object sender, EventArgs e)
+        private void nudMaximumNestedBlockDepth_ValueChanged(object sender, EventArgs e)
         {
             this.dirty = true;
             this.StyleCopTabControl.DirtyChanged();

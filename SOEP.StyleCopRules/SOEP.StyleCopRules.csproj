@@ -48,20 +48,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MethodShouldNotHaveTooManyLines.cs" />
+    <Compile Include="NestedBlockDepthSettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NestedBlockDepthSettingsPage.Designer.cs">
+      <DependentUpon>NestedBlockDepthSettingsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="MethodShouldNotHaveTooManyLinesSettingsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MethodShouldNotHaveTooManyLinesSettingsPage.Designer.cs">
       <DependentUpon>MethodShouldNotHaveTooManyLinesSettingsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="NestedBlockDepth.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MethodShouldNotHaveTooManyLines.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="NestedBlockDepthSettingsPage.resx">
+      <DependentUpon>NestedBlockDepthSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MethodShouldNotHaveTooManyLinesSettingsPage.resx">
       <DependentUpon>MethodShouldNotHaveTooManyLinesSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NestedBlockDepth.xml">
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

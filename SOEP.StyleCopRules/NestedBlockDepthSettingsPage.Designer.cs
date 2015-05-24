@@ -1,6 +1,6 @@
 ﻿namespace SOEP.StyleCopRules
 {
-    partial class MethodShouldNotHaveTooManyLinesSettingsPage
+    partial class NestedBlockDepthSettingsPageSettingsPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,9 +30,9 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.nudMaxMethodLineCount = new System.Windows.Forms.NumericUpDown();
+            this.nudMaximumNestedBlockDepth = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMaxMethodLineCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaximumNestedBlockDepth)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -41,7 +41,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.nudMaxMethodLineCount, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.nudMaximumNestedBlockDepth, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -57,40 +57,40 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 15);
+            this.label1.Size = new System.Drawing.Size(223, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Maximum Method Line Count:";
+            this.label1.Text = "Maximum Nested Block Depth:";
             // 
-            // nudMaxMethodLineCount
+            // nudMaximumNestedBlockDepth
             // 
-            this.nudMaxMethodLineCount.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.nudMaxMethodLineCount.Location = new System.Drawing.Point(224, 3);
-            this.nudMaxMethodLineCount.Maximum = new decimal(new int[] {
+            this.nudMaximumNestedBlockDepth.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.nudMaximumNestedBlockDepth.Location = new System.Drawing.Point(232, 3);
+            this.nudMaximumNestedBlockDepth.Maximum = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.nudMaxMethodLineCount.Name = "nudMaxMethodLineCount";
-            this.nudMaxMethodLineCount.Size = new System.Drawing.Size(116, 25);
-            this.nudMaxMethodLineCount.TabIndex = 1;
-            this.nudMaxMethodLineCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudMaxMethodLineCount.Value = new decimal(new int[] {
-            50,
+            this.nudMaximumNestedBlockDepth.Name = "nudMaximumNestedBlockDepth";
+            this.nudMaximumNestedBlockDepth.Size = new System.Drawing.Size(108, 25);
+            this.nudMaximumNestedBlockDepth.TabIndex = 1;
+            this.nudMaximumNestedBlockDepth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudMaximumNestedBlockDepth.Value = new decimal(new int[] {
+            5,
             0,
             0,
             0});
-            this.nudMaxMethodLineCount.ValueChanged += new System.EventHandler(this.nudMaxMethodLineCount_ValueChanged);
+            this.nudMaximumNestedBlockDepth.ValueChanged += new System.EventHandler(this.nudMaximumNestedBlockDepth_ValueChanged);
             // 
-            // MethodShouldNotHaveTooManyLinesSettingsPage
+            // NestedBlockDepthSettingsPageSettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "MethodShouldNotHaveTooManyLinesSettingsPage";
+            this.Name = "NestedBlockDepthSettingsPageSettingsPage";
             this.Size = new System.Drawing.Size(343, 160);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMaxMethodLineCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaximumNestedBlockDepth)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -99,6 +99,6 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown nudMaxMethodLineCount;
+        private System.Windows.Forms.NumericUpDown nudMaximumNestedBlockDepth;
     }
 }

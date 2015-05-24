@@ -12,9 +12,9 @@ namespace SOEP.StyleCopRules
     public class MethodShouldNotHaveTooManyLines : SourceAnalyzer
     {
         public readonly static string MaximumMethodLineCountSettingName = "MaximumMethodLineCount";
+        private readonly static int MaximumMethodLineCountDefaultValue = 50;
         private readonly static string RuleName = string.Empty;
         private readonly static int LineCountOfMethodHeaderAndTwoCurlyBracket = 3;
-        private readonly static int DefaultMaximumMethodLineCount = 50;
 
         public override ICollection<IPropertyControlPage> SettingsPages
         {
@@ -29,7 +29,7 @@ namespace SOEP.StyleCopRules
         {
             RuleName = typeof(MethodShouldNotHaveTooManyLines).Name;
         }
-                                                   
+
         public override void AnalyzeDocument(CodeDocument document)
         {
             CsDocument csharpDocument = (CsDocument)document;
@@ -50,7 +50,7 @@ namespace SOEP.StyleCopRules
             }
             else
             {
-                MaximumMethodLineCount = DefaultMaximumMethodLineCount;
+                MaximumMethodLineCount = MaximumMethodLineCountDefaultValue;
             }
         }
 
@@ -67,5 +67,4 @@ namespace SOEP.StyleCopRules
             return true;
         }
     }
-
 }
