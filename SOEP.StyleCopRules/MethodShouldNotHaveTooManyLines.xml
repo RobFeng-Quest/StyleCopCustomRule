@@ -9,7 +9,7 @@
   </Properties>
   <Rules>
     <RuleGroup Name="Method">
-      <Rule Name="MethodsShouldNotHaveTooManyLines" CheckId="SO1001">
+      <Rule Name="MethodShouldNotHaveTooManyLines" CheckId="SO1001">
         <Properties>
           <IntegerProperty Name="MaximumMethodLineCount" DefaultValue="50" FriendlyName="Maximum Method Line Count"
                            Description="Maximum authorized lines in a method."/>

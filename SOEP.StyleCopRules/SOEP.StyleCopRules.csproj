@@ -38,6 +38,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,12 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MethodsShouldNotHaveTooManyLines.cs" />
+    <Compile Include="MethodShouldNotHaveTooManyLines.cs" />
+    <Compile Include="MethodShouldNotHaveTooManyLinesSettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MethodShouldNotHaveTooManyLinesSettingsPage.Designer.cs">
+      <DependentUpon>MethodShouldNotHaveTooManyLinesSettingsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MethodsShouldNotHaveTooManyLines.xml">
+    <EmbeddedResource Include="MethodShouldNotHaveTooManyLines.xml">
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MethodShouldNotHaveTooManyLinesSettingsPage.resx">
+      <DependentUpon>MethodShouldNotHaveTooManyLinesSettingsPage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
