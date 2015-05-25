@@ -9,7 +9,7 @@
   </Properties>
   <Rules>
     <RuleGroup Name="Method">
-      <Rule Name="MethodShouldNotHaveTooManyLines" CheckId="SO1001">      
+      <Rule Name="MethodsShouldNotHaveTooManyLines" CheckId="SO1001">      
         <Context>The method '{0}' has {1} lines, which is greater than {2} authorized. Split it into smaller moethd.</Context>
         <Description>
           A method that grows too large tends to aggregate too many responsibilities. Such methods inevitably become harder to understand and therefore harder to maintain.

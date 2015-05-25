@@ -12,7 +12,7 @@ namespace SOEP.StyleCopRules
     public class NestedBlockDepth : SourceAnalyzer
     {
         public readonly static string MaximumNestedBlockDepthSettingName = "MaximumNestedBlockDepth";
-        private readonly static int MaximumNestedBlockDepthDefaultValue = 5;
+        private readonly static int MaximumNestedBlockDepthDefaultValue = 4;
         private readonly static string RuleName = string.Empty;
         private readonly static int ExtraNestedBlockDepth = 1;
 

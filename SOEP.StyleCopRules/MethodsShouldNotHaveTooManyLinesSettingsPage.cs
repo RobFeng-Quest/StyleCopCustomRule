@@ -12,11 +12,11 @@ using StyleCop;
 namespace SOEP.StyleCopRules
 {
 
-    public partial class MethodShouldNotHaveTooManyLinesSettingsPage : UserControl, IPropertyControlPage
+    public partial class MethodsShouldNotHaveTooManyLinesSettingsPage : UserControl, IPropertyControlPage
     {
         private bool dirty;
 
-        private MethodShouldNotHaveTooManyLines Analyzer { get; set; }
+        private MethodsShouldNotHaveTooManyLines Analyzer { get; set; }
         public PropertyControl StyleCopTabControl { get; set; }
         public bool Dirty
         {
@@ -38,7 +38,7 @@ namespace SOEP.StyleCopRules
             get { return "MethodShouldNotHaveTooManyLines Rule"; }
         }
 
-        public MethodShouldNotHaveTooManyLinesSettingsPage(MethodShouldNotHaveTooManyLines Analyzer)
+        public MethodsShouldNotHaveTooManyLinesSettingsPage(MethodsShouldNotHaveTooManyLines Analyzer)
         {
             this.Analyzer = Analyzer;
 
@@ -66,7 +66,7 @@ namespace SOEP.StyleCopRules
                     this.StyleCopTabControl.LocalSettings,
                     new IntProperty(
                         this.Analyzer,
-                        MethodShouldNotHaveTooManyLines.MaximumMethodLineCountSettingName,
+                        MethodsShouldNotHaveTooManyLines.MaximumMethodLineCountSettingName,
                         (int)this.nudMaxMethodLineCount.Value));
             }
 
@@ -81,7 +81,7 @@ namespace SOEP.StyleCopRules
             // Load the current setting
             IntProperty maximumMethodLineCountSettingProperty = this.Analyzer.GetSetting(
                 this.StyleCopTabControl.MergedSettings,
-                MethodShouldNotHaveTooManyLines.MaximumMethodLineCountSettingName) as IntProperty;
+                MethodsShouldNotHaveTooManyLines.MaximumMethodLineCountSettingName) as IntProperty;
 
             if (maximumMethodLineCountSettingProperty != null)
             {

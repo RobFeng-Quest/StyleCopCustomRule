@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace SOEP.StyleCopRules
 {
     [SourceAnalyzer(typeof(CsParser))]
-    public class MethodShouldNotHaveTooManyLines : SourceAnalyzer
+    public class MethodsShouldNotHaveTooManyLines : SourceAnalyzer
     {
         public readonly static string MaximumMethodLineCountSettingName = "MaximumMethodLineCount";
         private readonly static int MaximumMethodLineCountDefaultValue = 50;
@@ -20,14 +20,14 @@ namespace SOEP.StyleCopRules
         {
             get
             {
-                return new IPropertyControlPage[] { new MethodShouldNotHaveTooManyLinesSettingsPage(this) };
+                return new IPropertyControlPage[] { new MethodsShouldNotHaveTooManyLinesSettingsPage(this) };
             }
         }
         private int MaximumMethodLineCount { get; set; }
 
-        static MethodShouldNotHaveTooManyLines()
+        static MethodsShouldNotHaveTooManyLines()
         {
-            RuleName = typeof(MethodShouldNotHaveTooManyLines).Name;
+            RuleName = typeof(MethodsShouldNotHaveTooManyLines).Name;
         }
 
         public override void AnalyzeDocument(CodeDocument document)

@@ -1,6 +1,6 @@
 ﻿namespace SOEP.StyleCopRules
 {
-    partial class MethodShouldNotHaveTooManyLinesSettingsPage
+    partial class MethodsShouldNotHaveTooManyLinesSettingsPage
     {
         /// <summary> 
         /// Required designer variable.
